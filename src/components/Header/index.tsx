@@ -8,7 +8,20 @@ import { useCart } from '../../hooks/useCart';
 
 const Header = (): JSX.Element => {
   const { cart } = useCart();
-  const cartSize = cart.filter((e, i, a) => a.indexOf(e) === i).length
+
+  function getCartSize () {
+    let counter = 0
+    let actual_id = -1
+    cart.forEach((product) => {
+      if (actual_id !== product.id) {
+        counter += 1;
+      }
+      actual_id = product.id
+    })
+    return counter
+  }
+  
+  const cartSize = getCartSize()
 
   return (
     <Container>
