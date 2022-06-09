@@ -1,6 +1,6 @@
 # shopping-cart
 In this challange, i developed a hook to save, update and exclude products in a shopping cart. 
-I used React Hooks, useState, a fake API with JSON server, localstorage API to persist the data and react-toastify to show the errors.
+I used React Hooks, useState, Context, a fake API with JSON server, localstorage API to persist the data and react-toastify to show the errors.
 
 
 
